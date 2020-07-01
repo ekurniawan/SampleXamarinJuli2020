@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Form Registrasi"
+             x:Class="SampleXamarinApp.SampleStackLayout">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="First Name :" />
+            <Entry x:Name="txtFirstName" Placeholder="insert firstname" />
+            <Label Text="Last Name :" />
+            <Entry x:Name="txtLastName" Placeholder="insert lastname" />
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnSubmit" Text="Submit" />
+                    <Button x:Name="btnClear" Text="Clear" />
+                    <Button Text="Clear" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

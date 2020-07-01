@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Grid Layout"
+             x:Class="SampleXamarinApp.SampleGridLayout">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="200*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Bilangan 1 :" FontSize="Medium" Grid.Column="0" Grid.Row="0" 
+                   HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtBil1" Placeholder="insert bil1" Grid.Column="1" Grid.Row="0" Keyboard="Numeric" />
+            <Label Text="Bilangan 2 :" FontSize="Medium" Grid.Column="0" Grid.Row="1" 
+                   HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtBil2" Placeholder="insert bil2" Grid.Column="1" Grid.Row="1" Keyboard="Numeric" />
+            <Label Text="Hasil :" FontSize="Medium" Grid.Column="0" Grid.Row="2" 
+                   HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtHasil" IsReadOnly="True" Grid.Column="1" Grid.Row="2" Keyboard="Numeric" />
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="0" 
+                         Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                <Button x:Name="btnTambah" Text="+" WidthRequest="50" 
+                        Clicked="btnHitung_Clicked" />
+                <Button x:Name="btnKurang" Text="-" WidthRequest="50" 
+                        
+                        Clicked="btnHitung_Clicked" />
+                <Button x:Name="btnKali" Text="*" WidthRequest="50" Clicked="btnHitung_Clicked" />
+                <Button x:Name="btnBagi" Text="/" WidthRequest="50" Clicked="btnHitung_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

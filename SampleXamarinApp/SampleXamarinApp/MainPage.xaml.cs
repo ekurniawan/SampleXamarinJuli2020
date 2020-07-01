@@ -23,8 +23,9 @@ namespace SampleXamarinApp
         {
             var firstname = entryUsername.Text;
             var lastname = "Kurniawan";
-            lblResult.Text = "Nama anda : " + firstname + " " + lastname ;
-            DisplayAlert("Keterangan", $"Nama anda: {firstname} {lastname}", "OK");
+            var usia = 17;
+            lblResult.Text = "Nama anda : " + firstname + " " + lastname;
+            DisplayAlert("Keterangan", $"Nama anda: {firstname} {lastname} Usia: {usia}", "OK");
         }
     }
 }
