@@ -32,8 +32,57 @@ namespace SampleXamarinApp
                 Title = "Xamarin Forms",
                 Description = "Belajar Xamarin Forms"
             });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms 1",
+                Description = "Belajar Xamarin Forms 1"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms 2",
+                Description = "Belajar Xamarin Forms 2"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Belajar Xamarin Forms"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Belajar Xamarin Forms"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Belajar Xamarin Forms"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Belajar Xamarin Forms"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Belajar Xamarin Forms"
+            });
+            lstItems.Add(new ListItem
+            {
+                Title = "Xamarin Forms",
+                Description = "Belajar Xamarin Forms"
+            });
+
 
             lvItem.ItemsSource = lstItems;
+        }
+
+        private void lvItem_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var selectData = (ListItem)e.Item;
+            DisplayAlert("Keterangan", 
+                $"Title: {selectData.Title} Desc: {selectData.Description}", "OK");
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

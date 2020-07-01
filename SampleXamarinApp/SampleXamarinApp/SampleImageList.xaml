@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" Title="Binding List Page"
-             x:Class="SampleXamarinApp.BindingListPage">
+             mc:Ignorable="d" Title="List with Image"
+             x:Class="SampleXamarinApp.SampleImageList">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvItem" ItemTapped="lvItem_ItemTapped">
+            <ListView x:Name="lvData">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Title}" Detail="{Binding Description}" 
-                                DetailColor="Blue" />
+                        <ImageCell ImageSource="{Binding Source}" Text="{Binding Title}"
+                                   Detail="{Binding Description}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
