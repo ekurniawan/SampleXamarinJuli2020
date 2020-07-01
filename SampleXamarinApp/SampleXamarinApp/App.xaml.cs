@@ -9,7 +9,7 @@ namespace SampleXamarinApp
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleFlexLayout();
+            MainPage = new SampleListString();
         }
 
         protected override void OnStart()
