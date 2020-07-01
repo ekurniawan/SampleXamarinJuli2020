@@ -19,6 +19,7 @@ namespace SampleXamarinApp
         public SampleFlexLayout()
         {
             InitializeComponent();
+            LoadImage();
         }
 
         async void LoadImage()
@@ -50,10 +51,14 @@ namespace SampleXamarinApp
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    flexLayout.Children.Add(new Label
+                    {
+                        Text = "Cannot access list of bitmap files"
+                    });
                 }
             }
+            activityIndicator.IsRunning = false;
+            activityIndicator.IsVisible = false;
         }
     }
 }

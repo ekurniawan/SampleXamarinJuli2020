@@ -11,7 +11,7 @@
                 <FlexLayout x:Name="flexLayout" Wrap="Wrap" 
                             JustifyContent="SpaceAround"/>
             </ScrollView>
-            <ActivityIndicator x:Name="activityIndicatior" IsRunning="True"
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="True"
                                VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
