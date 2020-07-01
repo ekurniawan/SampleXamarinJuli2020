@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +10,7 @@ namespace SampleXamarinApp
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleListString();
+            MainPage = new BindingListPage();
         }
 
         protected override void OnStart()

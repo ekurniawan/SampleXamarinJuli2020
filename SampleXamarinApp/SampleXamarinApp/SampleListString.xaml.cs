@@ -34,6 +34,8 @@ namespace SampleXamarinApp
         {
             var itemSelect = (string)e.Item;
             DisplayAlert("Keterangan", $"Anda memilih item: {itemSelect}", "OK");
+            var myList = (ListView)sender;
+            myList.SelectedItem = null;
         }
     }
 }
