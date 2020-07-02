@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Custom List"
+             x:Class="SampleXamarinApp.SampleCustomList">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvData" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="200*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="30*" />
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding Source}" WidthRequest="60"
+                                       Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" 
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                                <StackLayout Orientation="Horizontal" Grid.Row="0" 
+                                             Grid.Column="1" VerticalOptions="Center">
+                                    <Label Text="Judul: " FontSize="Subtitle" />
+                                    <Label Text="{Binding Title}" FontSize="Subtitle"
+                                           FontAttributes="Bold" />
+                                </StackLayout>
+                                <Label Text="{Binding Description}" Grid.Column="1" Grid.Row="1" 
+                                       VerticalOptions="Center" />
+                                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="2" 
+                                             VerticalOptions="Center">
+                                    <Label Text="Harga: Rp." />
+                                    <Label Text="{Binding Price}" FontAttributes="Bold" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" 
+                                             VerticalOptions="Center" HorizontalOptions="End">
+                                    <Button Text="Delete" FontSize="Small" CommandParameter="{Binding Title}" Clicked="OnDelete" />
+                                    <Button Text="Edit" FontSize="Small" CommandParameter="{Binding Title}" Clicked="OnEdit" />
+                                    
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

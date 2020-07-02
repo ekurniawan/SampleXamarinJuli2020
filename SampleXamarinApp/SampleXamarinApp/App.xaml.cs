@@ -10,7 +10,7 @@ namespace SampleXamarinApp
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleImageList();
+            MainPage = new SampleCustomList();
         }
 
         protected override void OnStart()
