@@ -10,7 +10,11 @@ namespace SampleXamarinApp
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new ContohTab());
+
+            //global
+            Application.Current.Properties["username"] = "";
+
+            MainPage = new MyMasterPage();
         }
 
         protected override void OnStart()

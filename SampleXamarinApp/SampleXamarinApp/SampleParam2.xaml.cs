@@ -19,6 +19,13 @@ namespace SampleXamarinApp
         }
 
         private string _param1,_param2;
+
+        private async void btnAppCurrent_Clicked(object sender, EventArgs e)
+        {
+            var data = Application.Current.Properties["username"].ToString();
+            await DisplayAlert("Keterangan", $"{data}","OK");
+        }
+
         public SampleParam2(string param1,string param2)
         {
             InitializeComponent();

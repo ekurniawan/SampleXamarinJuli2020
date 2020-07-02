@@ -9,6 +9,12 @@
         <StackLayout>
             <Entry x:Name="txtData" Placeholder="insert data" />
             <Button x:Name="btnSubmit" Text="Submit" Clicked="btnSubmit_Clicked" />
+            <Button x:Name="btnAppCurrent" Text="Set App Current" 
+                    Clicked="btnAppCurrent_Clicked" />
+            <Button x:Name="btnPreference" Text="Create Preference" 
+                    Clicked="btnPreference_Clicked" />
+            <Button x:Name="btnGetPreference" Text="Get Preference"
+                    Clicked="btnGetPreference_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

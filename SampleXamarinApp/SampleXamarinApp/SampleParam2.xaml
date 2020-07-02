@@ -8,6 +8,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="lblParam" FontSize="Large" />
+            <Button x:Name="btnAppCurrent" Text="Cek App Current" 
+                    Clicked="btnAppCurrent_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
