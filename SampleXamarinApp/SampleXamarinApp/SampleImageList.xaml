@@ -7,7 +7,7 @@
              x:Class="SampleXamarinApp.SampleImageList">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvData">
+            <ListView x:Name="lvData" ItemTapped="lvData_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell ImageSource="{Binding Source}" Text="{Binding Title}"

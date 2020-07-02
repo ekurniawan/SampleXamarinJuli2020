@@ -37,5 +37,12 @@ namespace SampleXamarinApp
             });
             lvData.ItemsSource = lstItems;
         }
+
+        private void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var itemSelect = (ListItem)e.Item;
+            DisplayAlert("Keterangan", 
+                $"Title: {itemSelect.Title} Desc:{itemSelect.Description}", "OK");
+        }
     }
 }
