@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Contoh Tab"
+             x:Class="SampleXamarinApp.ContohTab"
+             xmlns:local="clr-namespace:SampleXamarinApp">
+  <!--Pages can be added as references or inline-->
+    <local:SampleCustomList Title="Custom List" />
+    <ContentPage Title="Tab 1">
+        <StackLayout>
+            <Label Text="Ini content TAB1" FontSize="Medium" />
+        </StackLayout>
+    </ContentPage>
+    <local:SampleNavigation Title="Navigation" IconImageSource="telpon.png" />
+
+</TabbedPage>

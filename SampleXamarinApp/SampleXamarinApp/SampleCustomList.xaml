@@ -42,7 +42,6 @@
                                              VerticalOptions="Center" HorizontalOptions="End">
                                     <Button Text="Delete" FontSize="Small" CommandParameter="{Binding Title}" Clicked="OnDelete" />
                                     <Button Text="Edit" FontSize="Small" CommandParameter="{Binding Title}" Clicked="OnEdit" />
-                                    
                                 </StackLayout>
                             </Grid>
                         </ViewCell>

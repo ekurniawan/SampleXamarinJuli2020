@@ -10,7 +10,7 @@ namespace SampleXamarinApp
         public App()
         {
             InitializeComponent();
-            MainPage = new SampleCustomList();
+            MainPage = new NavigationPage(new ContohTab());
         }
 
         protected override void OnStart()

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Home"
+             x:Class="SampleXamarinApp.SampleNavigation">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuCal" IconImageSource="telpon.png" Order="Primary"
+                    Clicked="menuCal_Clicked" />
+        <ToolbarItem x:Name="menuListImage" Text="List Image" 
+                     Order="Secondary" Clicked="btnListImage_Clicked" />
+        <ToolbarItem x:Name="menuCustomList" Text="Custom List" 
+                     Order="Secondary" Clicked="btnListCustom_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnListImage" Text="Halaman List Image" 
+                    Clicked="btnListImage_Clicked" />
+            <Button x:Name="btnListCustom" Text="Halaman Custom List"
+                    Clicked="btnListCustom_Clicked"/>
+            <Button x:Name="btnDisplayAlert" Text="Display Alert" 
+                    Clicked="btnDisplayAlert_Clicked" />
+            <Button x:Name="btnActionSheet" Text="Action Sheet" 
+                    Clicked="btnActionSheet_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
