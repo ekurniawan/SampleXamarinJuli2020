@@ -14,5 +14,4 @@
         </StackLayout>
     </ContentPage>
     <local:SampleNavigation Title="Navigation" IconImageSource="telpon.png" />
-
 </TabbedPage>

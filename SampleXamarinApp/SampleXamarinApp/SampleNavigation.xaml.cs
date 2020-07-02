@@ -52,5 +52,10 @@ namespace SampleXamarinApp
                 "Google Drive", "One Drive", "Drop Box", "Samsung Cloud");
             await DisplayAlert("Keterangan", $"Anda memilih {result}", "OK");
         }
+
+        private async void btnParam_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SampleParam1());
+        }
     }
 }

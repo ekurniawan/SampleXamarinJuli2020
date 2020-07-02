@@ -23,6 +23,7 @@
                     Clicked="btnDisplayAlert_Clicked" />
             <Button x:Name="btnActionSheet" Text="Action Sheet" 
                     Clicked="btnActionSheet_Clicked" />
+            <Button x:Name="btnParam" Text="Coba Param" Clicked="btnParam_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
