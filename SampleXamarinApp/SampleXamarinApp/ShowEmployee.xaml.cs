@@ -42,7 +42,10 @@ namespace SampleXamarinApp
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            if (txtSearch.Text.Length >= 4)
+            {
+                lvData.ItemsSource = _dataAccess.GetAllEmpByName(txtSearch.Text);
+            }
         }
     }
 }
