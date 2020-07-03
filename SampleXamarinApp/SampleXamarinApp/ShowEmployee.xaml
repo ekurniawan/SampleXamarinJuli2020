@@ -7,6 +7,8 @@
              x:Class="SampleXamarinApp.ShowEmployee">
     <ContentPage.Content>
         <StackLayout>
+            <Entry x:Name="txtSearch" Placeholder="search" 
+                   TextChanged="txtSearch_TextChanged" />
             <ListView x:Name="lvData" ItemTapped="lvData_ItemTapped">
                 <ListView.Header>
                     <Grid BackgroundColor="YellowGreen">

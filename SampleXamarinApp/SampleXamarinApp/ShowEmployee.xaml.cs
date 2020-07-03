@@ -39,5 +39,10 @@ namespace SampleXamarinApp
             frmEditEmployee.BindingContext = editData;
             await Navigation.PushAsync(frmEditEmployee);
         }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

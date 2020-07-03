@@ -36,6 +36,14 @@ namespace SampleXamarinApp.DAL
             return result;
         }
 
+        public IEnumerable<Employee> GetAllEmpByName(string name)
+        {
+            var result = from e in db.Table<Employee>()
+                         where e.EmpName.ToLower().Contains(name)
+                         select e;
+            return result;
+        }
+
         public int InsertEmployee(Employee emp)
         {
             return db.Insert(emp);
