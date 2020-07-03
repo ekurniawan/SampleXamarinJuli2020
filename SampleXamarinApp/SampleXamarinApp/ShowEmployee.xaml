@@ -7,7 +7,7 @@
              x:Class="SampleXamarinApp.ShowEmployee">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvData">
+            <ListView x:Name="lvData" ItemTapped="lvData_ItemTapped">
                 <ListView.Header>
                     <Grid BackgroundColor="YellowGreen">
                         <Grid.RowDefinitions>

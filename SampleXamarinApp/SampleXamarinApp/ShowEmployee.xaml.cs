@@ -30,5 +30,10 @@ namespace SampleXamarinApp
         {
             await Navigation.PushAsync(new AddEmployee());
         }
+
+        private void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
+        }
     }
 }
