@@ -31,7 +31,7 @@
             <Label Text="Designation :" FontSize="Medium" HorizontalTextAlignment="End"
                    VerticalTextAlignment="Center"
                    Grid.Column="0" Grid.Row="2" />
-            <Entry x:Name="txtDesignation" Text="{Binding Designation}" Grid.Row="1" Grid.Column="1" />
+            <Entry x:Name="txtDesignation" Text="{Binding Designation}" Grid.Row="2" Grid.Column="1" />
             <Label Text="Department :" FontSize="Medium" HorizontalTextAlignment="End"
                    VerticalTextAlignment="Center"
                    Grid.Column="0" Grid.Row="3" />

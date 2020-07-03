@@ -1,4 +1,5 @@
 ﻿using SampleXamarinApp.DAL;
+using SampleXamarinApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,9 +32,12 @@ namespace SampleXamarinApp
             await Navigation.PushAsync(new AddEmployee());
         }
 
-        private void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-
+            var editData = (Employee)e.Item;
+            EditEmployee frmEditEmployee = new EditEmployee();
+            frmEditEmployee.BindingContext = editData;
+            await Navigation.PushAsync(frmEditEmployee);
         }
     }
 }
