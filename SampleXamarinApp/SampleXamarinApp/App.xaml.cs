@@ -14,7 +14,7 @@ namespace SampleXamarinApp
             //global
             Application.Current.Properties["username"] = "";
 
-            MainPage = new MyMasterPage();
+            MainPage = new NavigationPage(new ShowEmployee());
         }
 
         protected override void OnStart()
