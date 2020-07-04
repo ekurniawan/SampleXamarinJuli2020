@@ -37,5 +37,12 @@ namespace SampleXamarinApp
             lvData.ItemsSource = results;
             lvData.IsRefreshing = false;
         }
+
+        private async void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var data = (MenuItem)sender;
+            await DisplayAlert("Keterangan", 
+                $"EmpId: {data.CommandParameter} akan dihapus", "OK");
+        }
     }
 }
