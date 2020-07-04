@@ -9,7 +9,7 @@
         <StackLayout>
             <Entry x:Name="txtSearch" Placeholder="search" />
             <ListView x:Name="lvData" IsPullToRefreshEnabled="True" 
-                      Refreshing="lvData_Refreshing">
+                      Refreshing="lvData_Refreshing" ItemTapped="lvData_ItemTapped">
                 <ListView.Header>
                     <Grid BackgroundColor="YellowGreen">
                         <Grid.RowDefinitions>

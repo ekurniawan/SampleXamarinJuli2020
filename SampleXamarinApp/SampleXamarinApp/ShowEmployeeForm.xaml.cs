@@ -1,4 +1,5 @@
-﻿using SampleXamarinApp.Services;
+﻿using SampleXamarinApp.Models;
+using SampleXamarinApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,14 @@ namespace SampleXamarinApp
             var data = (MenuItem)sender;
             await DisplayAlert("Keterangan", 
                 $"EmpId: {data.CommandParameter} akan dihapus", "OK");
+        }
+
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var editEmp = (Employee)e.Item;
+            var editEmpForm = new EditEmployeeForm();
+            editEmpForm.BindingContext = editEmp;
+            await Navigation.PushAsync(editEmpForm);
         }
     }
 }
