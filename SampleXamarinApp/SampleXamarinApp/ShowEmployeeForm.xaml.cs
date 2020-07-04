@@ -25,5 +25,10 @@ namespace SampleXamarinApp
             var results = await empService.GetAll();
             lvData.ItemsSource = results;
         }
+
+        private async void btnAdd_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddEmployeeForms());
+        }
     }
 }
