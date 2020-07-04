@@ -43,5 +43,23 @@ namespace SampleXamarinApp.Services
             }
             return lstEmp;
         }
+
+        public async Task Insert(Employee emp)
+        {
+            var uriPost = new Uri($"{restUrl}/api/Employee");
+            try
+            {
+                var jsonObj = JsonConvert.SerializeObject(emp);
+                var content = new StringContent(jsonObj,
+                    Encoding.UTF8, "application/json");
+                var response = await _client.PostAsync(uriPost, content);
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception("Data gagal untuk ditambahkan");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
