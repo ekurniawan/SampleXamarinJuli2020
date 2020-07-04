@@ -61,5 +61,38 @@ namespace SampleXamarinApp.Services
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task Edit(Employee emp)
+        {
+            var uriPut = new Uri($"{restUrl}/api/Employee");
+            try
+            {
+                var json = JsonConvert.SerializeObject(emp);
+                var content = new StringContent(json, 
+                    Encoding.UTF8, "application/json");
+                var response = await _client.PutAsync(uriPut, content);
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception("Data gagal untuk diupdate");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task Delete(string id)
+        {
+            var uriDelete = new Uri($"{restUrl}/api/Employee/{id}");
+            try
+            {
+                var response = await _client.DeleteAsync(uriDelete);
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception("Data gagal untuk didelete");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
