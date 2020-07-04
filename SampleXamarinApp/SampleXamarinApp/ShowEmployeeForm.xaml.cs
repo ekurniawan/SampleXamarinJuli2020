@@ -55,8 +55,14 @@ namespace SampleXamarinApp
         private async void MenuItem_Clicked(object sender, EventArgs e)
         {
             var data = (MenuItem)sender;
-            await DisplayAlert("Keterangan", 
-                $"EmpId: {data.CommandParameter} akan dihapus", "OK");
+            var result = await DisplayAlert("Konfirmasi", "Yakin delete data?", 
+                "OK", "Cancel");
+            if (result)
+            {
+                await empService.Delete(Convert.ToInt32(data.CommandParameter));
+                await DisplayAlert("Keterangan", "Data berhasil di delete", "OK");
+                await GetData();
+            }
         }
 
         private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)

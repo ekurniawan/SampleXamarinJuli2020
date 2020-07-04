@@ -80,7 +80,7 @@ namespace SampleXamarinApp.Services
             }
         }
 
-        public async Task Delete(string id)
+        public async Task Delete(int id)
         {
             var uriDelete = new Uri($"{restUrl}/api/Employee/{id}");
             try
