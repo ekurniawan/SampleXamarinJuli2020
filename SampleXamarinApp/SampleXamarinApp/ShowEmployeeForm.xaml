@@ -8,7 +8,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Entry x:Name="txtSearch" Placeholder="search" />
-            <ListView x:Name="lvData">
+            <ListView x:Name="lvData" IsPullToRefreshEnabled="True" 
+                      Refreshing="lvData_Refreshing">
                 <ListView.Header>
                     <Grid BackgroundColor="YellowGreen">
                         <Grid.RowDefinitions>
@@ -30,6 +31,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40" />

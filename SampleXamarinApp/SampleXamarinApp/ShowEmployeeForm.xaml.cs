@@ -30,5 +30,12 @@ namespace SampleXamarinApp
         {
             await Navigation.PushAsync(new AddEmployeeForms());
         }
+
+        private async void lvData_Refreshing(object sender, EventArgs e)
+        {
+            var results = await empService.GetAll();
+            lvData.ItemsSource = results;
+            lvData.IsRefreshing = false;
+        }
     }
 }
