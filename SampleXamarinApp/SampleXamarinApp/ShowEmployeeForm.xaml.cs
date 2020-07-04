@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,10 +20,24 @@ namespace SampleXamarinApp
             empService = new EmployeeService();
         }
 
+        private async Task GetData()
+        {
+            var current = Connectivity.NetworkAccess;
+            if (current != NetworkAccess.Internet || 
+                current == NetworkAccess.ConstrainedInternet)
+            {
+                await DisplayAlert("Keterangan", "Tidak ada koneksi internet", "OK");
+            }
+            else
+            {
+                var results = await empService.GetAll();
+                lvData.ItemsSource = results;
+            }
+        }
+
         protected async override void OnAppearing()
         {
-            var results = await empService.GetAll();
-            lvData.ItemsSource = results;
+            await GetData();
         }
 
         private async void btnAdd_Clicked(object sender, EventArgs e)
@@ -33,8 +47,7 @@ namespace SampleXamarinApp
 
         private async void lvData_Refreshing(object sender, EventArgs e)
         {
-            var results = await empService.GetAll();
-            lvData.ItemsSource = results;
+            await GetData();
             lvData.IsRefreshing = false;
         }
 
